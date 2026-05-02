@@ -119,7 +119,7 @@ export default function RegisterPage() {
                     <button
                         type="submit"
                         disabled={loading}
-                        className={`w-full py-4 px-4 mt-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-2xl text-base font-bold shadow-lg shadow-blue-500/30 transition-all duration-300 flex items-center justify-center gap-2 ${loading ? 'opacity-70 cursor-not-allowed' : 'hover:-translate-y-0.5'}`}
+                        className={`w-full py-4 px-4 mt-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-2xl text-base font-bold shadow-lg shadow-blue-500/30 transition-all duration-300 flex items-center justify-center cursor-pointer gap-2 ${loading ? 'opacity-70 cursor-not-allowed' : 'hover:-translate-y-0.5'}`}
                     >
                         {loading ? (
                             <>

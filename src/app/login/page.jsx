@@ -19,7 +19,6 @@ export default function Login() {
         const email = e.target.email.value;
         const password = e.target.password.value;
 
-
         const { data, error } = await authClient.signIn.email({
             email,
             password,
@@ -92,7 +91,7 @@ export default function Login() {
                             <button
                                 onClick={handleForgotPassword}
                                 type="button"
-                                className="text-sm font-bold text-blue-600 hover:text-blue-700 hover:underline transition-all"
+                                className="text-sm font-bold text-blue-600 hover:text-blue-700 hover:underline transition-all cursor-pointer"
                             >
                                 Forgot password?
                             </button>
@@ -105,10 +104,11 @@ export default function Login() {
                                 className="w-full px-5 py-3.5 bg-gray-50 border border-gray-200 text-gray-900 rounded-2xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 focus:bg-white transition-all outline-none"
                                 required
                             />
+
                             <button
                                 type="button"
                                 onClick={() => setShowPassword(!showPassword)}
-                                className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors"
+                                className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors cursor-pointer"
                             >
                                 {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
                             </button>
@@ -118,7 +118,7 @@ export default function Login() {
                     <button
                         type="submit"
                         disabled={loading}
-                        className={`w-full py-4 px-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-2xl text-base font-bold shadow-lg shadow-blue-500/30 transition-all duration-300 ${loading ? 'opacity-70 cursor-not-allowed' : 'hover:-translate-y-0.5'}`}
+                        className={`w-full py-4 px-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white cursor-pointer rounded-2xl text-base font-bold shadow-lg shadow-blue-500/30 transition-all duration-300 ${loading ? 'opacity-70 cursor-not-allowed' : 'hover:-translate-y-0.5'}`}
                     >
                         {loading ? (
                             <span className="flex items-center justify-center gap-2">
@@ -137,7 +137,7 @@ export default function Login() {
                     <button
                         type="button"
                         onClick={handleGoogleLogin}
-                        className="w-full py-3.5 px-4 bg-white border-2 border-gray-100 hover:border-gray-200 hover:bg-gray-50 text-gray-700 rounded-2xl flex items-center justify-center gap-3 transition-all font-bold shadow-sm"
+                        className="w-full py-3.5 px-4 bg-white border-2 border-gray-100 hover:border-gray-200 hover:bg-gray-50 text-gray-700 rounded-2xl flex items-center justify-center gap-3 transition-all font-bold shadow-sm cursor-pointer"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" className="w-5 h-5">
                             <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.7 17.74 9.5 24 9.5z" />
@@ -150,7 +150,7 @@ export default function Login() {
 
                     <p className="mt-8 text-center text-sm text-gray-600 font-medium">
                         Don't have an account?{' '}
-                        <Link href="/register" className="text-blue-600 font-bold hover:text-blue-700 hover:underline transition-all">
+                        <Link href="/register" className="text-blue-600 font-bold hover:text-blue-700 hover:underline transition-all cursor-pointer">
                             Sign up for free
                         </Link>
                     </p>
