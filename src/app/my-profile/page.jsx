@@ -141,7 +141,7 @@ export default function MyProfile() {
                                 <div className="pt-4">
                                     <button
                                         disabled={loading}
-                                        className="w-full py-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold rounded-2xl shadow-lg shadow-blue-500/25 transition-all active:scale-95 disabled:opacity-70 flex items-center justify-center gap-2"
+                                        className="w-full py-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold rounded-2xl shadow-lg shadow-blue-500/25 transition-all active:scale-95 disabled:opacity-70 flex items-center justify-center gap-2 cursor-pointer"
                                     >
                                         {loading ? (
                                             <>

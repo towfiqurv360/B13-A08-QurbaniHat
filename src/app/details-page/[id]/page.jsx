@@ -44,16 +44,16 @@ export default function AnimalDetails({ params }) {
     return (
         <PrivateRoute>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 mt-20">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
 
 
-                    <div className="lg:col-span-7 space-y-8">
-                        <div className="relative group overflow-hidden rounded-[2.5rem] shadow-2xl border border-gray-100">
+                    <div className="lg:col-span-7 space-y-8 ">
+                        <div className="relative group overflow-hidden rounded-[2.5rem] shadow-2xl border border-gray-100 cursor-pointer">
                             <img
                                 src={animal.image}
                                 alt={animal.name}
-                                className="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-105"
+                                className="w-full h-[500px] rounded-2xl object-cover transition-transform duration-700 group-hover:scale-105"
                             />
                             <div className="absolute top-6 left-6 flex gap-3">
                                 <span className="bg-white/90 backdrop-blur-md px-4 py-2 rounded-full text-sm font-bold text-blue-600 shadow-sm uppercase tracking-wide">

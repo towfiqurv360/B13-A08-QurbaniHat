@@ -24,7 +24,7 @@ export default function Home() {
       name: "Deshi Brahman",
       breed: "Brahman",
       price: "1,80,000",
-      image: "https://images.unsplash.com/photo-1596733430284-f743727520c5?auto=format&fit=crop&q=80&w=400",
+      image: "https://i.ibb.co.com/Dg6wjfYV/uttam-patidar-qsjs7-Dw0ziw-unsplash.jpg",
       isNew: true,
     },
     {
@@ -32,7 +32,7 @@ export default function Home() {
       name: "Mirka Red Bull",
       breed: "Sindhi",
       price: "95,000",
-      image: "https://images.unsplash.com/photo-1529144415895-6aaf8be872fb?auto=format&fit=crop&q=80&w=400",
+      image: "https://i.ibb.co.com/jkGzgpGK/nipun-chandra-surnilla-Jw-WLnf-7-Ss-E-unsplash.jpg",
       isNew: false,
     },
   ];
@@ -78,11 +78,11 @@ export default function Home() {
           <Link href="/animals" className="text-blue-600 font-bold hover:underline">View All Animals →</Link>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 cursor-pointer">
            {featuredAnimals.map((animal) => (
              <div key={animal.id} className="card bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all rounded-3xl overflow-hidden group">
                
-               <div className="h-48 relative overflow-hidden bg-gray-100">
+               <div className="h-48 relative overflow-hidden bg-gray-100 rounded-2xl">
                  <img 
                    src={animal.image} 
                    alt={animal.name} 
@@ -118,16 +118,16 @@ export default function Home() {
             <p className="text-gray-400">Everything you need to know before buying your sacrificial animal.</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 cursor-pointer">
             <div className="bg-gray-800 p-8 rounded-3xl border border-gray-700 hover:border-emerald-500 transition-colors">
-              <div className="w-14 h-14 bg-emerald-500/10 flex items-center justify-center rounded-2xl mb-6">
+              <div className="w-14 h-14 bg-emerald-500/10 flex items-center justify-center rounded-2xl mb-6 cursor-pointer">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
               </div>
               <h3 className="text-xl font-bold mb-3">Check Health</h3>
               <p className="text-gray-400 leading-relaxed">Ensure the animal is active, bright-eyed, and has no visible wounds or physical defects.</p>
             </div>
             
-            <div className="bg-gray-800 p-8 rounded-3xl border border-gray-700 hover:border-blue-500 transition-colors">
+            <div className="bg-gray-800 p-8 rounded-3xl border border-gray-700 hover:border-blue-500 transition-colors ">
               <div className="w-14 h-14 bg-blue-500/10 flex items-center justify-center rounded-2xl mb-6">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
               </div>
@@ -150,9 +150,9 @@ export default function Home() {
         <h2 className="text-4xl font-extrabold text-gray-900 mb-4">Our Top Breeds</h2>
         <p className="text-gray-500 mb-12">Discover the finest local and international breeds we offer.</p>
         
-        <div className="flex flex-wrap justify-center gap-6">
+        <div className="flex flex-wrap justify-center gap-6 ">
           {["Shahiwal", "Brahman", "Gir", "Australian", "Jamunapari", "Local Deshi"].map((breed) => (
-            <div key={breed} className="px-8 py-4 bg-white border border-gray-200 rounded-2xl font-bold text-gray-700 hover:border-emerald-500 hover:text-emerald-600 hover:shadow-md transition-all cursor-default">
+            <div key={breed} className="px-8 py-4 bg-white border border-gray-200 rounded-2xl font-bold text-gray-700 hover:border-emerald-500 hover:text-emerald-600 hover:shadow-md transition-all cursor-pointer ">
               {breed}
             </div>
           ))}
