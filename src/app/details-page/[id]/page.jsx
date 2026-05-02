@@ -2,8 +2,7 @@
 
 import React, { useEffect, useState, use } from 'react';
 import toast from 'react-hot-toast';
-// import PrivateRoute from '../components/PrivateRoute';
-import PrivateRoute from '@/components/PrivateRoute';
+import PrivateRoute from "@/components/PrivateRoute";
 
 export default function AnimalDetails({ params }) {
     const unwrappedParams = use(params);
