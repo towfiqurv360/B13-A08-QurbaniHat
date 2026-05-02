@@ -5,10 +5,11 @@ import { authClient } from "@/lib/auth-client";
 import { useRouter } from "next/navigation";
 import Link from 'next/link';
 import toast from "react-hot-toast";
-import { User, Mail, Lock, Image as ImageIcon, ArrowRight } from 'lucide-react';
+import { User, Mail, Lock, Image as ImageIcon, ArrowRight, Eye, EyeOff } from 'lucide-react';
 
 export default function RegisterPage() {
     const [loading, setLoading] = useState(false);
+    const [showPassword, setShowPassword] = useState(false);
     const router = useRouter();
 
     const handleRegister = async (e) => {
@@ -69,7 +70,6 @@ export default function RegisterPage() {
                         </div>
                     </div>
 
-
                     <div className="space-y-2">
                         <label className="text-sm font-bold text-gray-700 tracking-wide ml-1">Email Address</label>
                         <div className="relative">
@@ -93,14 +93,22 @@ export default function RegisterPage() {
                                 <Lock size={18} />
                             </span>
                             <input
-                                type="password"
+                                type={showPassword ? "text" : "password"}
                                 name="password"
                                 placeholder="••••••••"
-                                className="w-full pl-11 pr-5 py-3.5 bg-gray-50 border border-gray-200 text-gray-900 rounded-2xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 focus:bg-white transition-all outline-none"
+                                className="w-full pl-11 pr-12 py-3.5 bg-gray-50 border border-gray-200 text-gray-900 rounded-2xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 focus:bg-white transition-all outline-none"
                                 required
                             />
+                            <button
+                                type="button"
+                                onClick={() => setShowPassword(!showPassword)}
+                                className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors cursor-pointer"
+                            >
+                                {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                            </button>
                         </div>
                     </div>
+
                     <div className="space-y-2">
                         <label className="text-sm font-bold text-gray-700 tracking-wide ml-1">Profile Image URL</label>
                         <div className="relative">
@@ -136,7 +144,7 @@ export default function RegisterPage() {
 
                     <p className="mt-8 text-center text-sm text-gray-600 font-medium">
                         Already have an account?{' '}
-                        <Link href="/login" className="text-blue-600 font-bold hover:text-blue-700 hover:underline transition-all">
+                        <Link href="/login" className="text-blue-600 font-bold hover:text-blue-700 hover:underline transition-all cursor-pointer">
                             Sign in here
                         </Link>
                     </p>
