@@ -4,6 +4,7 @@
 
 ## 🌐 Live Demo
 ✨ **Check it out here:** [https://b13-a08-qurbani-hat-8fto.vercel.app](https://b13-a08-qurbani-hat-8fto.vercel.app)
+                           [https://qurbanihatoa8.netlify.app](https://qurbanihatoa8.netlify.app/)
 
 ---
 
