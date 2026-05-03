@@ -3,7 +3,7 @@
 **Qurbani Hat** is a cutting-edge e-commerce platform built for seamless livestock transactions. Designed with a focus on clean aesthetics and robust security, it incorporates high-level professional standards as seen in projects like **KeenKeeper** and the **Student Resource Portal**.
 
 ## 🌐 Live Demo
-✨ **Check it out here:** [https://b13-a08-qurbani-hat-8fto.vercel.app](https://b13-a08-qurbani-hat-8fto.vercel.app)
+✨ **Check it out here:** [https://b13-a08-qurbani-hat-8fto.vercel.app](https://b13-a08-qurbani-hat-8fto.vercel.app)  or
                            [https://qurbanihatoa8.netlify.app](https://qurbanihatoa8.netlify.app/)
 
 ---
